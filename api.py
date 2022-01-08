@@ -13,9 +13,11 @@ pickle_in = open('LGBMClassifier.pkl', 'rb')
 model = pickle.load(pickle_in)
 
 
-description = pd.read_csv("features_description.csv", 
+description = pd.read_csv("https://raw.githubusercontent.com/timot00/Projet7/master/Code/features_description.csv", 
                               usecols=['Row', 'Description'], index_col=0, encoding= 'unicode_escape')
-data = pd.read_csv('input_data_model2.zip', index_col='SK_ID_CURR', encoding ='utf-8')
+
+
+data = pd.read_csv('https://raw.githubusercontent.com/timot00/Projet7/master/Code/input_data_model2.zip', index_col='SK_ID_CURR', encoding ='utf-8')
 
 #data = pd.read_csv('input_data_model.csv.zip', index_col='SK_ID_CURR', encoding ='utf-8')
 data = data.drop('Unnamed: 0', 1)
